@@ -1,0 +1,133 @@
+:root {
+    --bg: hsla(48, 53%, 96%, 1);
+
+    --lowerTabBg: hsla(49, 85%, 97%, 1);
+
+    --AddIcon: hsla(225, 75%, 46%, 1);
+
+    --Icon: hsla(225, 15%, 26%, 1);
+
+    --addIconBg: hsla(49, 85%, 97%, 1);
+
+    --addIconDisBackground: hsla(224, 15%, 26%, 1);
+
+    --TaskModalBackground: hsla(60, 11%, 98%, 1);
+
+    --TaskModalText: hsla(225, 5%, 28%, 1);
+
+    --InputBorder: hsla(225, 5%, 57%, 1);
+
+    --InputButtonBackground: hsla(225, 67%, 43%, 1);
+
+    --InputButtonText: hsla(49, 85%, 97%, 1);
+
+    --cardBackground: hsla(60, 11%, 98%, 1);
+
+    --cardText1: hsla(230, 4%, 27%, 1);
+
+    --cardIcon: hsla(230, 4%, 27%, 1);
+
+    --statusBg: hsla(240, 5%, 96%, 1);
+
+    --statusText: hsla(225, 62%, 33%, 1);
+
+    --cardText2: hsla(230, 4%, 27%, 1);
+
+    --statusButton: hsla(230, 4%, 27%, 1);
+
+    --statusButtonText: hsla(230, 4%, 27%, 1);
+
+    --statusButtonPressedBorder: hsla(226, 77%, 45%, 1);
+
+    --statusButtonPressedText: hsla(226, 77%, 45%, 1);
+
+    --sortBg: hsla(60, 37%, 97%, 1);
+
+    --sortText: hsla(230, 4%, 27%, 1);
+
+    --sortButtonNotSelected: hsla(224, 11%, 62%, 1);
+
+    --sortButtonSelected: hsla(225, 76%, 47%, 1);
+
+    --sortButtonText: hsla(225, 76%, 47%, 1);
+
+    --bar: hsla(230, 4%, 69%, 1);
+
+    --lowerBox: 0px 0px 20px 0px hsla(0, 0%, 0%, 0.12);
+
+    --lowerIconBox: 0px 4px 10px 0px hsla(0, 0%, 0%, 0.25);
+
+    --mainCardBox: 0px 25px 30px 0px hsla(0, 0%, 0%, 0.1);
+
+    --tasksCardBox: 0px 0px 20px 0px hsla(0, 3%, 82%, 0.25);
+
+    --sortCardBox: 0px 0px 20px 0px hsla(0, 3%, 82%, 0.25);
+
+}
+
+.dark{
+    --bg: hsla(60, 5%, 12%, 1);
+
+    --lowerTabBg:hsla(48, 63%, 6%, 1);
+
+    --AddIcon:hsla(225, 89%, 60%, 1);
+
+    --Icon: hsla(226, 53%, 80%, 1);
+
+    --addIconBg: hsla(48, 63%, 6%, 1);
+
+    --addIconDisBackground: hsla(226, 53%, 80%, 1);
+
+    --TaskModalBackground: hsla(60, 7%, 14%, 1);
+
+    --TaskModalText: hsla(180, 9%, 98%, 1);
+
+    --InputBorder: hsla(225, 5%, 88%, 1);
+
+    --InputButtonBackground: hsla(225, 80%, 45%, 1);
+
+    --InputButtonText: hsla(49, 85%, 97%, 1);
+
+    --cardBackground: hsla(60, 6%, 14%, 1);
+
+    --cardText1: hsla(180, 9%, 98%, 1);
+
+    --cardIcon: hsla(180, 9%, 98%, 1);
+
+    --statusBg:hsla(60, 27%, 10%, 1);
+
+    --statusText: hsla(216, 100%, 74%, 1);
+
+    --cardText2: hsla(180, 9%, 98%, 1);
+
+    --statusButton: hsla(180, 9%, 98%, 1);
+
+    --statusButtonText: hsla(180, 9%, 98%, 1);
+
+    --statusButtonPressedBorder: hsla(226, 62%, 77%, 1);
+
+    --statusButtonPressedText: hsla(226, 62%, 77%, 1);
+
+    --sortBg: hsla(60, 5%, 11%, 1);
+
+    --sortText: hsla(180, 9%, 98%, 1);
+
+    --sortButtonNotSelected: hsla(226, 14%, 70%, 1);
+
+    --sortButtonSelected: hsla(225, 76%, 47%, 1);
+
+    --sortButtonText: hsla(180, 100%, 95%, 1);
+
+    --bar: hsla(230, 4%, 69%, 1);
+
+    --lowerBox: 0px 0px 20px 0px hsla(0, 0%, 0%, 0.12);
+
+    --lowerIconBox: 0px 4px 10px 0px hsla(0, 0%, 0%, 0.25);
+
+    --mainCardBox: 0px 25px 30px 0px hsla(0, 0%, 0%, 0.1);
+
+    --tasksCardBox: 0px 0px 20px 0px hsla(360, 10%, 8%, 0.25);
+
+    --sortCardBox: 0px 0px 20px 0px hsla(0, 0%, 0%, 0.25);
+
+}

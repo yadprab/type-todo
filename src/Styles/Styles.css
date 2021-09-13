@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+:root {
+  --alpha: 1;
+  --alpha-2: 0.8;
+  --alpha-3: 0.6;
+  --alpha-4: 0.4;
+  --alpha-5: 0.2;
+}
+
+:root {
+  --bg: hsla(48, 53%, 96%, 1);
+  --lowerTabBg: hsla(49, 85%, 97%, 1);
+  --AddIcon: hsla(225, 75%, 46%, 1);
+  --Icon: hsla(225, 15%, 26%, 1);
+  --addIconBg: hsla(49, 85%, 97%, 1);
+  --addIconDisBackground: hsla(224, 15%, 26%, 1);
+  --TaskModalBackground: hsla(60, 11%, 98%, 1);
+  --TaskModalText: hsla(225, 5%, 28%, 1);
+  --InputBorder: hsla(225, 5%, 57%, 1);
+  --InputButtonBackground: hsla(225, 67%, 43%, 1);
+  --InputButtonText: hsla(49, 85%, 97%, 1);
+  --cardBackground: hsla(60, 11%, 98%, 1);
+  --cardText1: hsla(230, 4%, 27%, 1);
+  --cardIcon: hsla(230, 4%, 27%, 1);
+  --statusBg: hsla(240, 5%, 96%, 1);
+  --statusText: hsla(225, 62%, 33%, 1);
+  --cardText2: hsla(230, 4%, 27%, 1);
+  --statusButton: hsla(230, 4%, 27%, 1);
+  --statusButtonText: hsla(230, 4%, 27%, 1);
+  --statusButtonPressedBorder: hsla(226, 77%, 45%, 1);
+  --statusButtonPressedText: hsla(226, 77%, 45%, 1);
+  --sortBg: hsla(60, 37%, 97%, 1);
+  --sortText: hsla(230, 4%, 27%, 1);
+  --sortButtonNotSelected: hsla(224, 11%, 62%, 1);
+  --sortButtonSelected: hsla(225, 76%, 47%, 1);
+  --sortButtonText: hsla(225, 76%, 47%, 1);
+  --bar: hsla(230, 4%, 69%, 1);
+  --lowerBox: 0px 0px 20px 0px hsla(0, 0%, 0%, 0.12);
+  --lowerIconBox: 0px 4px 10px 0px hsla(0, 0%, 0%, 0.25);
+  --mainCardBox: 0px 25px 30px 0px hsla(0, 0%, 0%, 0.1);
+  --tasksCardBox: 0px 0px 20px 0px hsla(0, 3%, 82%, 0.25);
+  --sortCardBox: 0px 0px 20px 0px hsla(0, 3%, 82%, 0.25);
+}
+
+.dark {
+  --bg: hsla(60, 5%, 12%, 1);
+  --lowerTabBg:hsla(48, 63%, 6%, 1);
+  --AddIcon:hsla(225, 89%, 60%, 1);
+  --Icon: hsla(226, 53%, 80%, 1);
+  --addIconBg: hsla(48, 63%, 6%, 1);
+  --addIconDisBackground: hsla(226, 53%, 80%, 1);
+  --TaskModalBackground: hsla(60, 7%, 14%, 1);
+  --TaskModalText: hsla(180, 9%, 98%, 1);
+  --InputBorder: hsla(225, 5%, 88%, 1);
+  --InputButtonBackground: hsla(225, 80%, 45%, 1);
+  --InputButtonText: hsla(49, 85%, 97%, 1);
+  --cardBackground: hsla(60, 6%, 14%, 1);
+  --cardText1: hsla(180, 9%, 98%, 1);
+  --cardIcon: hsla(180, 9%, 98%, 1);
+  --statusBg:hsla(60, 27%, 10%, 1);
+  --statusText: hsla(216, 100%, 74%, 1);
+  --cardText2: hsla(180, 9%, 98%, 1);
+  --statusButton: hsla(180, 9%, 98%, 1);
+  --statusButtonText: hsla(180, 9%, 98%, 1);
+  --statusButtonPressedBorder: hsla(226, 62%, 77%, 1);
+  --statusButtonPressedText: hsla(226, 62%, 77%, 1);
+  --sortBg: hsla(60, 5%, 11%, 1);
+  --sortText: hsla(180, 9%, 98%, 1);
+  --sortButtonNotSelected: hsla(226, 14%, 70%, 1);
+  --sortButtonSelected: hsla(225, 76%, 47%, 1);
+  --sortButtonText: hsla(180, 100%, 95%, 1);
+  --bar: hsla(230, 4%, 69%, 1);
+  --lowerBox: 0px 0px 20px 0px hsla(0, 0%, 0%, 0.12);
+  --lowerIconBox: 0px 4px 10px 0px hsla(0, 0%, 0%, 0.25);
+  --mainCardBox: 0px 25px 30px 0px hsla(0, 0%, 0%, 0.1);
+  --tasksCardBox: 0px 0px 20px 0px hsla(360, 10%, 8%, 0.25);
+  --sortCardBox: 0px 0px 20px 0px hsla(0, 0%, 0%, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  min-width: 100%;
+  overflow-x: hidden;
+  font-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg:not(#plus) {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.75;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+main {
+  padding: 3em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav {
+  margin-bottom: 128px;
+}
+
+.lower--tab {
+  padding: 1.5em;
+  background-color: var(--lowerTabBg);
+  -webkit-box-shadow: var(--lowerBox);
+          box-shadow: var(--lowerBox);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lower--tab button:not(.plus--button) {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background: unset;
+}
+
+.lower--tab button:not(.plus--button) svg path {
+  fill: var(--Icon);
+}
+
+.lower--tab .plus--button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  -webkit-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
+  width: 60px;
+  height: 60px;
+  background: var(--addIconBg);
+  border-radius: 50px;
+  position: absolute;
+  top: -20px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: var(--lowerIconBox);
+          box-shadow: var(--lowerIconBox);
+  cursor: pointer;
+}
+
+.lower--tab .plus--button:disabled {
+  cursor: none;
+}
+
+.lower--tab .plus--button:disabled #plus path {
+  fill: var(--addIconDisBackground);
+}
+
+.lower--tab #plus path {
+  fill: var(--AddIcon);
+}
+
+.modal--wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal--control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 0 1.5em 0;
+}
+
+.task--modal {
+  padding: 1em;
+  background: var(--TaskModalBackground);
+  position: relative;
+  -webkit-box-shadow: var(--tasksCardBox);
+          box-shadow: var(--tasksCardBox);
+  max-width: 360px;
+  border-radius: 10px;
+}
+
+label {
+  font-size: 1.5rem;
+  margin: 0 0 1em 0;
+  color: var(--TaskModalText);
+}
+
+#close--button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+}
+
+#close--button svg path {
+  fill: var(--Icon);
+}
+
+#text {
+  height: 40px;
+  border-radius: 4px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid var(--InputBorder);
+  background: unset;
+  min-width: 320px;
+}
+
+.add--tasks {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+  cursor: pointer;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  line-height: 24px;
+  border-radius: 50px;
+  background-color: var(--InputButtonBackground);
+  color: var(--InputButtonText);
+}
+/*# sourceMappingURL=Styles.css.map */

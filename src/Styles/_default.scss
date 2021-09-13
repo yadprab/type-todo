@@ -32,7 +32,7 @@ a {
     text-decoration: none;
 }
 
-svg:not(#chev) {
+svg:not(#plus) {
     width: 24px;
     height: 24px;
     pointer-events: none;
@@ -40,8 +40,11 @@ svg:not(#chev) {
 
 body {
     background-color: var(--bg);
-   line-height: 1.75;
+    font-family: 'Inter',
+        sans-serif;
+    line-height: 1.75;
     position: relative;
     overflow: hidden;
     transition: background 0.4s ease-in-out;
 }
+

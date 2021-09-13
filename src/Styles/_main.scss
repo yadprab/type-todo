@@ -1,0 +1,70 @@
+main {
+    padding: 3em 1em;
+    @include flex-2;
+}
+
+nav {
+    margin-bottom: 128px;
+}
+
+.lower--tab {
+    padding: 1.5em;
+    background-color: var(--lowerTabBg);
+    box-shadow: var(--lowerBox);
+    position: fixed;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button:not(.plus--button) {
+        appearance: none;
+        border: none;
+        background: unset;
+
+        svg {
+            path {
+                fill: var(--Icon);
+            }
+        }
+    }
+
+    .plus--button {
+        appearance: none;
+        border: none;
+        transition: background 0.4s ease-in-out;
+        width: 60px;
+        height: 60px;
+        background: var(--addIconBg);
+        border-radius: 50px;
+        position: absolute;
+        top: -20px;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        @include flex-1;
+        box-shadow: var(--lowerIconBox);
+        cursor: pointer;
+
+
+        &:disabled {
+            #plus {
+                path {
+                    fill: var(--addIconDisBackground);
+                }
+            }
+
+            cursor: none;
+        }
+
+    }
+
+    #plus {
+        path {
+            fill: var(--AddIcon);
+        }
+    }
+}

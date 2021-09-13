@@ -1,0 +1,66 @@
+.modal--wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    @include flex-1;
+
+
+}
+
+.modal--control {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 0 1.5em 0;
+
+}
+
+.task--modal {
+    padding: 1em;
+    background: var(--TaskModalBackground);
+    position: relative;
+    box-shadow: var(--tasksCardBox);
+    max-width: 360px;
+    border-radius: 10px;
+
+
+}
+
+label {
+    font-size: 1.5rem;
+    margin: 0 0 1em 0;
+    color: var(--TaskModalText);
+}
+
+#close--button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    @include svg-button;
+
+    svg {
+        path {
+            fill: var(--Icon);
+        }
+    }
+}
+
+#text {
+    height: 40px;
+    border-radius: 4px;
+    appearance: none;
+    border: 1px solid var(--InputBorder);
+    background: unset;
+    min-width: 320px;
+
+}
+
+.add--tasks {
+    width: 100%;
+    @include medium-button;
+    border-radius: 50px;
+    background-color: var(--InputButtonBackground);
+    color: var(--InputButtonText);
+}
