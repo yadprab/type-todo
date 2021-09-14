@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useCallback } from "react";
+import React, { useContext, useEffect, useCallback, MouseEvent } from "react";
 import { Filter } from "./Icons/Filter";
 import { Moon } from "./Icons/Moon";
 import { Sun } from "./Icons/Sun";
@@ -22,21 +22,31 @@ function LowerTab() {
     });
   }, [context]);
 
+  const handleClick = useCallback(
+    (e: MouseEvent<HTMLButtonElement>) => {
+      context?.setGlobalState({
+        ...context.GlobalState,
+        startTasks: true,
+      });
+
+      const tar = e.target as HTMLButtonElement;
+
+      console.log(context?.GlobalState.startTasks);
+
+      context?.GlobalState.startTasks
+        ? (tar.disabled = true)
+        : tar.removeAttribute("disabled");
+    },
+    [context]
+  );
+
   return (
     <>
       <div className="lower--tab">
         <button className="theme--button" onClick={changeTheme}>
           {context?.GlobalState.themeState ? <Moon /> : <Sun />}
         </button>
-        <button
-          className="plus--button"
-          onClick={() => {
-            context?.setGlobalState({
-              ...context.GlobalState,
-              startTasks: true,
-            });
-          }}
-        >
+        <button className="plus--button" onClick={handleClick}>
           <Plus />
         </button>
         <button className="filter--button">

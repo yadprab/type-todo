@@ -63,8 +63,13 @@ nav {
     }
 
     #plus {
+        pointer-events: none;
         path {
             fill: var(--AddIcon);
         }
     }
+}
+
+.plus--icon{
+    pointer-events: none;
 }

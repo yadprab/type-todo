@@ -7,3 +7,13 @@ export interface IState {
     filterTask: boolean;
   };
 }
+export interface IReducer {
+  redState: {
+    todo: string;
+    id: string;
+    isCompleted: boolean;
+    isOpen: boolean;
+    isDelete: boolean;
+    isTrying: boolean;
+  }[];
+}

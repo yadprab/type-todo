@@ -256,8 +256,16 @@ nav {
   fill: var(--addIconDisBackground);
 }
 
+.lower--tab #plus {
+  pointer-events: none;
+}
+
 .lower--tab #plus path {
   fill: var(--AddIcon);
+}
+
+.plus--icon {
+  pointer-events: none;
 }
 
 .modal--wrapper {
