@@ -6,7 +6,7 @@ const Down = () => {
       <div className="down--icon">
         <svg
           width={19}
-          height={11}
+          height={19}
           viewBox="0 0 19 11"
           fill="none"
           id="down"

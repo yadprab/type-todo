@@ -1,10 +1,18 @@
 import React from "react";
+import { Check } from "./Icons/Check";
 
-function Status() {
+function Status({ isCompleted }: { isCompleted: boolean }) {
   return (
     <>
       <div className="status--wrapper">
-        <p>Recently Added</p>
+        {isCompleted ? (
+          <p>
+            <Check />
+            Completed
+          </p>
+        ) : (
+          <p>Recently Added</p>
+        )}
       </div>
     </>
   );

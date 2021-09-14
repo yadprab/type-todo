@@ -13,6 +13,24 @@ const reducer = (state: IReducer["redState"], action: ACTIONTYPES) => {
   switch (action.type) {
     case "Submit":
       return [...state, newTodo(action.payload)];
+
+    case "Toggle":
+      return state.map((s) => {
+        if (s.id === action.payload) {
+          return { ...s, isOpen: !s.isOpen };
+        } else {
+          return { ...s };
+        }
+      });
+
+    case "Finished":
+      return state.map((s) => {
+        if (s.id === action.payload) {
+          return { ...s, isCompleted: !s.isCompleted };
+        } else {
+          return { ...s };
+        }
+      });
     default:
       return state;
   }

@@ -32,7 +32,7 @@ a {
     text-decoration: none;
 }
 
-svg:not(#plus) {
+svg:not(#plus):not(#down):not(#delete):not(#check) {
     width: 24px;
     height: 24px;
     pointer-events: none;
@@ -47,4 +47,3 @@ body {
     overflow: hidden;
     transition: background 0.4s ease-in-out;
 }
-

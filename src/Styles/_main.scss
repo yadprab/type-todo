@@ -4,7 +4,7 @@ main {
 }
 
 nav {
-    margin-bottom: 128px;
+   margin: 0 0 3em 0;
 }
 
 .lower--tab {
@@ -72,4 +72,14 @@ nav {
 
 .plus--icon{
     pointer-events: none;
+}
+
+.middle--comp{
+    @include flex-2;
+
+    p{
+        text-align: center;
+        max-width: 280px;
+        color: var(--cardText1);
+    }
 }

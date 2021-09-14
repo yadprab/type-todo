@@ -17,3 +17,10 @@ export interface IReducer {
     isTrying: boolean;
   }[];
 }
+
+export interface IState2 {
+  states2: {
+    value: string;
+    error: boolean;
+  };
+}
