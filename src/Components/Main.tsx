@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { dataContext } from "./dataContext";
+import { ListComp } from "./ListComp";
 import { LowerTab } from "./LowerTab";
 import { MiddleComp } from "./MiddleComp";
 import Modal from "./Modal";
@@ -12,9 +13,14 @@ const Main: React.FC = () => {
       <div className="main--wrapper">
         <main className="main--comp">
           <Nav />
-          {!context?.GlobalState.startTasks && <MiddleComp />}
+          {!context?.GlobalState.startTasks && !context?.GlobalState.addTask ? (
+            <MiddleComp />
+          ) : (
+            ""
+          )}
           <LowerTab />
           {context?.GlobalState.startTasks && <Modal />}
+          {context?.GlobalState.addTask && <ListComp />}
           <LowerTab />
         </main>
       </div>

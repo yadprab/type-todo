@@ -7,16 +7,7 @@ import { dataContext, ACTIONTYPES } from "./Components/dataContext";
 import { IState } from "./Components/interface";
 import { IReducer } from "./Components/interface";
 
-const initialState = [
-  {
-    todo: "value",
-    id: "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
-    isCompleted: false,
-    isOpen: false,
-    isDelete: false,
-    isTrying: false,
-  },
-];
+const initialState: IReducer["redState"] = [];
 
 const reducer = (state: IReducer["redState"], action: ACTIONTYPES) => {
   switch (action.type) {

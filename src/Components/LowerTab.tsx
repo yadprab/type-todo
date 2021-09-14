@@ -28,14 +28,6 @@ function LowerTab() {
         ...context.GlobalState,
         startTasks: true,
       });
-
-      const tar = e.target as HTMLButtonElement;
-
-      console.log(context?.GlobalState.startTasks);
-
-      context?.GlobalState.startTasks
-        ? (tar.disabled = true)
-        : tar.removeAttribute("disabled");
     },
     [context]
   );
@@ -46,7 +38,11 @@ function LowerTab() {
         <button className="theme--button" onClick={changeTheme}>
           {context?.GlobalState.themeState ? <Moon /> : <Sun />}
         </button>
-        <button className="plus--button" onClick={handleClick}>
+        <button
+          className="plus--button"
+          onClick={handleClick}
+          disabled={context?.GlobalState.startTasks ? true : false}
+        >
           <Plus />
         </button>
         <button className="filter--button">
