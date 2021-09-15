@@ -5,6 +5,7 @@ import { LowerTab } from "./LowerTab";
 import { MiddleComp } from "./MiddleComp";
 import Modal from "./Modal";
 import { Nav } from "./Nav";
+import { AnimatePresence } from "framer-motion";
 
 const Main: React.FC = () => {
   const context = useContext(dataContext);
@@ -13,13 +14,26 @@ const Main: React.FC = () => {
       <div className="main--wrapper">
         <main className="main--comp">
           <Nav />
-          {!context?.GlobalState.startTasks && !context?.GlobalState.addTask ? (
-            <MiddleComp />
-          ) : (
-            ""
-          )}
+          <AnimatePresence exitBeforeEnter>
+            {!context?.GlobalState.startTasks &&
+            !context?.GlobalState.addTask ? (
+              <div className="animate--wrap">
+                <MiddleComp />
+              </div>
+            ) : (
+              ""
+            )}
+          </AnimatePresence>
+
           <LowerTab />
-          {context?.GlobalState.startTasks && <Modal />}
+          <AnimatePresence exitBeforeEnter>
+            {context?.GlobalState.startTasks && (
+              <div className="mod-ani--wrapper">
+                <Modal />
+              </div>
+            )}
+          </AnimatePresence>
+
           {context?.GlobalState.addTask && <ListComp />}
           <LowerTab />
         </main>

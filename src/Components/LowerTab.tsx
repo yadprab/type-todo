@@ -5,6 +5,7 @@ import { Sun } from "./Icons/Sun";
 import { Plus } from "./Icons/Plus";
 import { dataContext } from "./dataContext";
 import { FilterComp } from "./FilterComp";
+import { AnimatePresence } from "framer-motion";
 function LowerTab() {
   const context = useContext(dataContext);
 
@@ -37,7 +38,9 @@ function LowerTab() {
     <>
       <div className="lower--tab">
         <button className="theme--button" onClick={changeTheme}>
-          {context?.GlobalState.themeState ? <Moon /> : <Sun />}
+          <AnimatePresence>
+            {context?.GlobalState.themeState ? <Moon /> : <Sun />}
+          </AnimatePresence>
         </button>
         <button
           className="plus--button"
@@ -57,7 +60,9 @@ function LowerTab() {
         >
           <Filter />
         </button>
-        {context?.GlobalState.filterTask && <FilterComp />}
+        <AnimatePresence exitBeforeEnter>
+          {context?.GlobalState.filterTask && <FilterComp />}
+        </AnimatePresence>
       </div>
     </>
   );

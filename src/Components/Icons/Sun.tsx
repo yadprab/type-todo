@@ -1,9 +1,16 @@
 import React from "react";
-
+import { motion } from "framer-motion";
+import { IconWrap } from "../variants";
 const Sun = () => {
   return (
     <>
-      <div className="sun--icon">
+      <motion.div
+        className="sun--icon"
+        variants={IconWrap}
+        initial="initial"
+        animate="visible"
+        exit="exit"
+      >
         <svg
           width={24}
           height={24}
@@ -48,7 +55,7 @@ const Sun = () => {
             fill="#B1BEE7"
           />
         </svg>
-      </div>
+      </motion.div>
     </>
   );
 };

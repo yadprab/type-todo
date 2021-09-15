@@ -1,12 +1,21 @@
+import { motion } from "framer-motion";
 import React, { useContext } from "react";
 import { dataContext } from "./dataContext";
 import { FilterButton } from "./FilterButton";
+import { filter } from "./variants";
 
 function FilterComp() {
   const context = useContext(dataContext);
+
   return (
     <>
-      <div className="filter--area">
+      <motion.div
+        className="filter--area"
+        variants={filter}
+        initial="initial"
+        animate="visible"
+        exit="exit"
+      >
         <button
           id="filter--close"
           onClick={() => {
@@ -20,7 +29,7 @@ function FilterComp() {
           }}
         ></button>
         <FilterButton />
-      </div>
+      </motion.div>
     </>
   );
 }

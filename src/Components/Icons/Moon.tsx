@@ -1,8 +1,9 @@
 import React from "react";
-
+import {motion} from 'framer-motion'
+import { IconWrap } from "../variants";
 const Moon = () => {
   return (
-    <div className="moon--icon">
+    <motion.div className="moon--icon" variants={IconWrap} initial='initial' animate='visible' exit='exit'>
       <svg
         width={24}
         height={24}
@@ -23,7 +24,7 @@ const Moon = () => {
           fill="#383D4B"
         />
       </svg>
-    </div>
+    </motion.div>
   );
 };
 export { Moon };

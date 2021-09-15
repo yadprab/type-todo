@@ -2,7 +2,8 @@ import React, { useContext, useCallback, ChangeEvent, useState } from "react";
 import { CloseButton } from "./CloseButton";
 import { dataContext } from "./dataContext";
 import { IState2 } from "./interface";
-
+import { wrap2 } from "./variants";
+import { motion } from "framer-motion";
 function Modal() {
   const context = useContext(dataContext);
 
@@ -27,7 +28,13 @@ function Modal() {
   }, [context, Input]);
   return (
     <>
-      <div className="modal--wrapper">
+      <motion.div
+        className="modal--wrapper"
+        variants={wrap2}
+        initial="initial"
+        animate="visible"
+        exit="exit"
+      >
         <div className="task--modal">
           <div className="modal--control">
             <label htmlFor="text">Enter the task name</label>
@@ -54,7 +61,7 @@ function Modal() {
 
           <CloseButton />
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
