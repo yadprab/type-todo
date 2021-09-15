@@ -1,11 +1,20 @@
+import { motion } from "framer-motion";
 import React, { useContext } from "react";
 import { dataContext } from "./dataContext";
+import { mid } from "./variants";
 
 function MidStatus({ id, isCompleted }: { id: string; isCompleted: boolean }) {
   const context = useContext(dataContext);
+
   return (
     <>
-      <div className="mid--wrapper">
+      <motion.div
+        className="mid--wrapper"
+        variants={mid}
+        initial="initial"
+        animate="visible"
+        exit="exit"
+      >
         <p>Completed the Task?</p>
         <button
           className="finished"
@@ -16,7 +25,7 @@ function MidStatus({ id, isCompleted }: { id: string; isCompleted: boolean }) {
         >
           {isCompleted ? "Undo" : "Finished"}
         </button>
-      </div>
+      </motion.div>
     </>
   );
 }

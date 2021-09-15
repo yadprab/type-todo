@@ -15,7 +15,6 @@ function Modal() {
   const handleClick = useCallback(() => {
     if (Input.value.trim() === "") {
       setInput({ ...Input, error: true });
-      console.log(Input);
     } else {
       context?.dispatch({ type: "Submit", payload: Input.value });
       setInput({ value: "", error: false });
@@ -42,6 +41,7 @@ function Modal() {
               type="text"
               name="text"
               id="text"
+              className={Input.error ? "error--state" : ""}
               onChange={(e: ChangeEvent<HTMLInputElement>) => {
                 const val = e.target.value;
 
@@ -52,7 +52,7 @@ function Modal() {
                 }
               }}
             />
-            {Input.error && <small>Enter the Taskname</small>}
+            {Input.error && <small>This field should not be empty</small>}
           </div>
 
           <button type="submit" className="add--tasks" onClick={handleClick}>

@@ -5,6 +5,7 @@ function Status({ isCompleted }: { isCompleted: boolean }) {
   return (
     <>
       <div className="status--wrapper">
+        
         {isCompleted ? (
           <div className="completed">
             <Check />

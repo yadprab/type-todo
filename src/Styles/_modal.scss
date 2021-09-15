@@ -5,6 +5,7 @@
     left: 0;
     bottom: 0;
     @include flex-1;
+    z-index: 20000;
 
 
 }
@@ -34,8 +35,17 @@ label {
     color: var(--TaskModalText);
 }
 
-input{
+input {
     color: var(--cardText1);
+    height: 40px;
+    border-radius: 4px;
+    appearance: none;
+    border: 1px solid var(--InputBorder);
+    background: unset;
+    min-width: 320px;
+
+
+
 }
 
 #close--button {
@@ -51,15 +61,7 @@ input{
     }
 }
 
-#text {
-    height: 40px;
-    border-radius: 4px;
-    appearance: none;
-    border: 1px solid var(--InputBorder);
-    background: unset;
-    min-width: 320px;
 
-}
 
 .add--tasks {
     width: 100%;
@@ -67,4 +69,15 @@ input{
     border-radius: 50px;
     background-color: var(--InputButtonBackground);
     color: var(--InputButtonText);
+}
+
+.error--state {
+    border: 2px solid var(--error);
+
+
+}
+
+small {
+    margin: 0.5em 0 0 0;
+    color: var(--error);
 }

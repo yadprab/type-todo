@@ -40,6 +40,7 @@
   --mainCardBox: 0px 25px 30px 0px hsla(0, 0%, 0%, 0.1);
   --tasksCardBox: 0px 0px 20px 0px hsla(0, 3%, 82%, 0.25);
   --sortCardBox: 0px 0px 20px 0px hsla(0, 3%, 82%, 0.25);
+  --error:hsla(342, 90%, 55%, 1);
 }
 
 .dark {
@@ -75,6 +76,7 @@
   --mainCardBox: 0px 25px 30px 0px hsla(0, 0%, 0%, 0.1);
   --tasksCardBox: 0px 0px 20px 0px hsla(360, 10%, 8%, 0.25);
   --sortCardBox: 0px 0px 20px 0px hsla(0, 0%, 0%, 0.25);
+  --error:hsla(342, 96%, 56%, 1);
 }
 
 html {
@@ -266,6 +268,7 @@ nav {
 
 .plus--icon {
   pointer-events: none;
+  height: 48px;
 }
 
 .middle--comp {
@@ -305,6 +308,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 20000;
 }
 
 .modal--control {
@@ -336,6 +340,14 @@ label {
 
 input {
   color: var(--cardText1);
+  height: 40px;
+  border-radius: 4px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid var(--InputBorder);
+  background: unset;
+  min-width: 320px;
 }
 
 #close--button {
@@ -354,17 +366,6 @@ input {
   fill: var(--Icon);
 }
 
-#text {
-  height: 40px;
-  border-radius: 4px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: 1px solid var(--InputBorder);
-  background: unset;
-  min-width: 320px;
-}
-
 .add--tasks {
   width: 100%;
   -webkit-appearance: none;
@@ -381,6 +382,15 @@ input {
   border-radius: 50px;
   background-color: var(--InputButtonBackground);
   color: var(--InputButtonText);
+}
+
+.error--state {
+  border: 2px solid var(--error);
+}
+
+small {
+  margin: 0.5em 0 0 0;
+  color: var(--error);
 }
 
 ul {

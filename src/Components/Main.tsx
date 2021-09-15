@@ -33,8 +33,10 @@ const Main: React.FC = () => {
               </div>
             )}
           </AnimatePresence>
+          <AnimatePresence exitBeforeEnter>
+            {context?.GlobalState.addTask && <ListComp />}
+          </AnimatePresence>
 
-          {context?.GlobalState.addTask && <ListComp />}
           <LowerTab />
         </main>
       </div>
