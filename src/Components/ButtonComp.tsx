@@ -18,7 +18,12 @@ function ButtonComp({ id, isOpen }: { id: string; isOpen: boolean }) {
         >
           <Down />
         </button>
-        <button id="delete--button">
+        <button
+          id="delete--button"
+          onClick={() => {
+            context?.dispatch({ type: "Delete", payload: id });
+          }}
+        >
           <Delete />
         </button>
       </div>

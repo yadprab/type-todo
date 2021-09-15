@@ -6,10 +6,10 @@ function Status({ isCompleted }: { isCompleted: boolean }) {
     <>
       <div className="status--wrapper">
         {isCompleted ? (
-          <p>
+          <div className="completed">
             <Check />
-            Completed
-          </p>
+            <p>Completed</p>
+          </div>
         ) : (
           <p>Recently Added</p>
         )}

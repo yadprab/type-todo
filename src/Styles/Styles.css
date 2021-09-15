@@ -108,7 +108,7 @@ a {
   text-decoration: none;
 }
 
-svg:not(#plus):not(#down):not(#delete):not(#check) {
+svg:not(#plus):not(#down):not(#delete):not(#check):not(#filter) {
   width: 24px;
   height: 24px;
   pointer-events: none;
@@ -206,7 +206,7 @@ nav {
           align-items: center;
 }
 
-.lower--tab button:not(.plus--button) {
+.lower--tab button:not(.plus--button):not(.filter--button) {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -214,7 +214,7 @@ nav {
   background: unset;
 }
 
-.lower--tab button:not(.plus--button) svg path {
+.lower--tab button:not(.plus--button):not(.filter--button) svg path {
   fill: var(--Icon);
 }
 
@@ -471,7 +471,7 @@ ul {
   margin: 0;
 }
 
-.status--wrapper p {
+.status--wrapper {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -485,31 +485,34 @@ ul {
   line-height: 24px;
   background-color: var(--statusBg);
   border-radius: 50px;
-  color: var(--statusText);
-  margin: 0;
-  font-weight: 500;
+}
+
+.status--wrapper .completed {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 160px;
 }
 
-.status--wrapper p .check--icon {
+.status--wrapper .completed .check--icon {
   height: 19px;
-}
-
-.status--wrapper p .check--icon svg {
+  width: 19px;
   margin: 0 0.25em 0 0;
 }
 
-.status--wrapper p .check--icon svg path {
+.status--wrapper .completed .check--icon svg path {
   fill: var(--AddIcon);
+}
+
+.status--wrapper p {
+  color: var(--statusText);
+  margin: 0;
+  font-weight: 500;
 }
 
 .finished {
@@ -536,5 +539,120 @@ ul {
 #undo {
   border: 1px solid var(--statusButtonPressedBorder);
   color: var(--statusButtonPressedText);
+}
+
+.All--tasks .hide--comp,
+.All--tasks .show--none,
+.All--tasks .show--comp {
+  display: block;
+}
+
+.comp--tasks .hide--comp {
+  display: none;
+}
+
+.comp--tasks .show--comp {
+  display: block;
+}
+
+.not--comp .hide--comp {
+  display: none;
+}
+
+.not--comp .show--none {
+  display: block;
+}
+
+.filter--area {
+  padding: 1.5em;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--sortBg);
+  display: -ms-grid;
+  display: grid;
+  gap: 3em;
+  -webkit-box-shadow: var(--sortCardBox);
+          box-shadow: var(--sortCardBox);
+}
+
+.filter--area .filter--icon {
+  width: 19px;
+  height: 19px;
+  margin: 0 0.25em 0 0;
+}
+
+.filter--area .filter--icon #filter {
+  width: inherit;
+  height: inherit;
+}
+
+.filter--area .filter--icon #filter path {
+  fill: var(--cardText1);
+}
+
+#filter--close {
+  background: var(--bar);
+  width: 96px;
+  height: 6px;
+  border-radius: 50px;
+  place-self: center;
+}
+
+.top--filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 1.5em 0;
+}
+
+.top--filter p {
+  margin: 0;
+  color: var(--cardText1);
+}
+
+.filter--buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter--button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0.5em 0.75em;
+  cursor: pointer;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  line-height: 24px;
+  border: 1px solid var(--sortButtonNotSelected);
+  color: var(--sortButtonNotSelected);
+  background-color: unset;
+  border-radius: 50px;
+  max-width: 128px;
+  font-size: 0.8rem;
+}
+
+.selected {
+  border: 2px solid var(--sortButtonSelected);
+  color: var(--sortButtonText);
+}
+
+#all {
+  width: 88px;
 }
 /*# sourceMappingURL=Styles.css.map */

@@ -31,6 +31,10 @@ const reducer = (state: IReducer["redState"], action: ACTIONTYPES) => {
           return { ...s };
         }
       });
+    case "Delete":
+      return state.filter((s) => s.id !== action.payload);
+
+  
     default:
       return state;
   }
@@ -54,6 +58,9 @@ function App() {
     theme: "light",
     themeState: true,
     filterTask: false,
+    All:true,
+    Completed:false,
+    NotCompleted:false,
   });
 
   const [state, dispatch] = useReducer(reducer, initialState);

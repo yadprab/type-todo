@@ -20,7 +20,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    button:not(.plus--button) {
+    button:not(.plus--button):not(.filter--button) {
         appearance: none;
         border: none;
         background: unset;

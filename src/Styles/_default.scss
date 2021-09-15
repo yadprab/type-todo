@@ -32,7 +32,7 @@ a {
     text-decoration: none;
 }
 
-svg:not(#plus):not(#down):not(#delete):not(#check) {
+svg:not(#plus):not(#down):not(#delete):not(#check):not(#filter) {
     width: 24px;
     height: 24px;
     pointer-events: none;

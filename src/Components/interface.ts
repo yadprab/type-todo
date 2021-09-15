@@ -5,6 +5,9 @@ export interface IState {
     theme: string;
     themeState: boolean;
     filterTask: boolean;
+    All: boolean;
+    Completed: boolean;
+    NotCompleted: boolean;
   };
 }
 export interface IReducer {
@@ -24,3 +27,11 @@ export interface IState2 {
     error: boolean;
   };
 }
+
+// export interface IState3 {
+//   states3: {
+//     All: boolean;
+//     Completed: boolean;
+//     NotCompleted: boolean;
+//   };
+// }

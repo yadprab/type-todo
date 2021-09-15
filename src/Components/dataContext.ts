@@ -5,7 +5,9 @@ import { IReducer } from "./interface";
 export type ACTIONTYPES =
   | { type: "Submit"; payload: string }
   | { type: "Toggle"; payload: string }
-  | { type: "Finished"; payload: string };
+  | { type: "Finished"; payload: string }
+  | { type: "Delete"; payload: string };
+
 
 interface IContext {
   ctx: {

@@ -8,10 +8,28 @@ function ListComp() {
   const context = useContext(dataContext);
   return (
     <>
-      <ul>
+      <ul
+        className={
+          context?.GlobalState.All
+            ? "All--tasks"
+            : context?.GlobalState.Completed
+            ? "comp--tasks"
+            : "not--comp"
+        }
+      >
         {context?.state.map((s) => {
           return (
-            <li className="todo-tasks" key={s.id} id={s.id}>
+            <li
+              className={`todo-tasks ${
+                s.isCompleted && context.GlobalState.Completed
+                  ? "show--comp"
+                  : !s.isCompleted && context.GlobalState.NotCompleted
+                  ? "show--none"
+                  : "hide--comp"
+              }`}
+              key={s.id}
+              id={s.id}
+            >
               <div className="top--section">
                 <p>{s.todo}</p>
                 <ButtonComp id={s.id} isOpen={s.isOpen} />

@@ -4,6 +4,7 @@ import { Moon } from "./Icons/Moon";
 import { Sun } from "./Icons/Sun";
 import { Plus } from "./Icons/Plus";
 import { dataContext } from "./dataContext";
+import { FilterComp } from "./FilterComp";
 function LowerTab() {
   const context = useContext(dataContext);
 
@@ -45,9 +46,18 @@ function LowerTab() {
         >
           <Plus />
         </button>
-        <button className="filter--button">
+        <button
+          className="filters--button"
+          onClick={() => {
+            context?.setGlobalState({
+              ...context.GlobalState,
+              filterTask: true,
+            });
+          }}
+        >
           <Filter />
         </button>
+        {context?.GlobalState.filterTask && <FilterComp />}
       </div>
     </>
   );
